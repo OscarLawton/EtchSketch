@@ -5,7 +5,7 @@ app.set('views', __dirname + '/views');
 app.engine('html', require('ejs').renderFile);
 app.use(express.static(path.join(__dirname, 'public')));
 
-const port = process.env.PORT 
+const port = process.env.PORT || 3000
 app.get('/', (req, res) => {
     res.render('etch5.html');
 })
